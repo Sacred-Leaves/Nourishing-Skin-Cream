@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Attractive Product Showcase</title>
+  <title>Nourishing Skin Cream</title>
 
   <!-- Google Font (Poppins) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <style>
-    /* Global Reset & Basic Styles */
+    /* Global Reset & Base Styles */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -25,18 +25,18 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f3f9ff 0%, #ffffff 100%);
+      background: linear-gradient(135deg, #f3f9ff, #ffffff);
       padding: 20px;
       color: #444;
     }
 
-    /* Main Product Container */
+    /* Main Product Container (1st Shadow Box) */
     .product-container {
       display: flex;
       flex-wrap: wrap;
       max-width: 1000px;
       margin: 0 auto;
-      background: #ffffff;
+      background: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       overflow: hidden;
@@ -47,7 +47,7 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
-    /* Left Section (Product Image Slider) */
+    /* Left Section (Image Slider) */
     .product-image {
       flex: 1 1 300px;
       min-width: 300px;
@@ -57,11 +57,11 @@
       justify-content: center;
       border-right: 1px solid #eee;
     }
-    /* Slider Container */
+    /* Use aspect-ratio to maintain a responsive slider height */
     .swiper-container {
       width: 100%;
       max-width: 350px;
-      height: 400px;  /* fixed height to show one image at a time */
+      aspect-ratio: 4/5;
       overflow: hidden;
     }
     .swiper-slide {
@@ -69,11 +69,12 @@
       height: 100%;
     }
     .swiper-slide img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    /* Navigation arrows styling */
+    /* Navigation Arrows */
     .swiper-button-prev,
     .swiper-button-next {
       color: #2980b9;
@@ -111,8 +112,6 @@
       font-size: 0.95rem;
       color: #555;
     }
-
-    /* Call-to-action button */
     .cta-button {
       display: inline-block;
       margin-top: 15px;
@@ -128,11 +127,11 @@
       background-color: #1f6690;
     }
 
-    /* Description Section */
+    /* Optional Product Description Section (2nd Shadow Box) */
     .product-description {
       max-width: 1000px;
       margin: 20px auto 0;
-      background: #ffffff;
+      background: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       padding: 20px;
@@ -163,15 +162,12 @@
         border-right: none;
         border-bottom: 1px solid #eee;
       }
-      .swiper-container {
-        max-width: 100%;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Product Container -->
+  <!-- Main Product Container -->
   <div class="product-container">
     <!-- Product Image Slider -->
     <div class="product-image">
@@ -216,6 +212,7 @@
     </ul>
     <h2>Способ применения:</h2>
     <p>Наносите крем на лицо и шею дважды в день после очищения. Для лучшего эффекта используйте регулярно.</p>
+
   </div>
 
   <!-- Swiper JS -->
